@@ -15,6 +15,7 @@ class PlaylistsController < ApplicationController
   # GET /playlists/new
   def new
     @playlist = Playlist.new
+    @users_selection = User.pluck(:name, :id)
   end
 
   # GET /playlists/1/edit
