@@ -2,7 +2,7 @@
 
 <h1>Playlists</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Name</th>
@@ -18,9 +18,9 @@
         <td><%= playlist.name %></td>
         <td><%= playlist.user.name %></td>
         <td><%= playlist.songs.count %></td>
-        <td><%= link_to 'Show', playlist %></td>
-        <td><%= link_to 'Edit', edit_playlist_path(playlist) %></td>
-        <td><%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', playlist, class:'btn btn-info btn-sm' %></td>
+        <td><%= link_to 'Edit', edit_playlist_path(playlist), class:'btn btn-secondary btn-sm' %></td>
+        <td><%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger btn-sm' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Playlist', new_playlist_path %>
+<%= link_to 'New Playlist', new_playlist_path, class:'btn btn-primary' %>
